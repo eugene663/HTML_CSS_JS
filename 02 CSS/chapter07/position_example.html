@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position 예제</title>
+    <style>
+      .container-1 {
+        margin: 30px;
+        border: 3px solid black;
+        width: 500px;
+        height: 300px;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid grey;
+
+        font-size: 36px;
+        font-weight: bold;
+
+        /* flex box*/
+        display: flex; /* 브라우저에게 유연하게 배치하라고 지정*/
+        justify-content: center; /* x축(중심축 가로방향) 위치 설정*/
+        align-items: center; /* y축(중심축 세로방향) 위치 설정*/
+        position: absolute;
+      }
+      .container-1 {
+        position: relative;
+      }
+      #red {
+        /*.contianer-1 > div:nth-child(1)*/
+        background-color: red;
+        top: 20px;
+        left: 20px;
+      }
+      #blue {
+        background-color: blue;
+        top: 20px;
+        right: 20px;
+      }
+      #green {
+        background-color: green;
+        bottom: 20px;
+        left: 20px;
+      }
+      #yellow {
+        background-color: yellow;
+
+        /*요소를 정가운데에 배치*/
+        top: 50%;
+        left: 50%;
+
+        /*margin 이용*/
+        /* margin-left: -50px;
+        margin-top: -50px; */
+
+        /*transform 이용*/
+        transform: translate(-50%, -50%);
+      }
+      #purple {
+        background-color: purple;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .container-2 {
+        width: 777px;
+        height: 333px;
+        border: 3px solid black;
+        position: relative;
+      }
+      #target {
+        background-color: hotpink;
+        width: 93px;
+        height: 73px;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        margin: auto;
+      }
+
+      .container-3 {
+        width: 521px;
+        height: 521px;
+        border: 3px solid black;
+        border-radius: 50%;
+
+        /*flex box*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #target3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>DummyText</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus,
+        commodi laborum, libero modi vero illum molestiae quia cumque quisquam
+        dolor quis beatae minus. Odio assumenda quaerat totam, iusto hic sint
+        ducimus atque molestias voluptatem suscipit vitae facere architecto
+        accusamus illo animi veritatis, nisi pariatur! Cum excepturi sint
+        necessitatibus? Corporis amet cumque earum vero quidem labore eos
+        facilis impedit tempora excepturi esse enim totam perferendis provident
+        aperiam sed eaque unde ullam necessitatibus ut, optio quibusdam illum
+        odit. Aliquid fugiat neque unde reiciendis. Inventore, a provident. A
+        explicabo totam vitae voluptatum, dolore molestias dolores, nesciunt
+        maxime adipisci eum autem, reprehenderit excepturi impedit?
+      </p>
+      <div class="container-1">
+        <div class="circle" id="red">1</div>
+        <div class="circle" id="blue">2</div>
+        <div class="circle" id="yellow">3</div>
+        <div class="circle" id="green">4</div>
+        <div class="circle" id="purple">5</div>
+      </div>
+    </div>
+    <hr />
+    <h3>요소 정가운데 배치 2(margin:auto)</h3>
+    <div class="container-2">
+      <div id="target"></div>
+    </div>
+
+    <hr />
+    <h3>요소 정가운데 배치 3(flex)</h3>
+    <div class="container-3">
+      <div id="target3"></div>
+    </div>
+  </body>
+</html>

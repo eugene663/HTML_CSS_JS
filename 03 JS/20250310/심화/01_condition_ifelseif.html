@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If else if 조건문</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date();
+      let time = date.getHours();
+      console.log(time);
+      if (time < 5) {
+        alert('잠을 자렴...');
+      } else if (time >= 5 && time < 7) {
+        alert('준비');
+      } else if (time >= 7 && time < 9) {
+        alert('출근');
+      } else if (time >= 9 && time < 12) {
+        alert('빈둥빈둥');
+      } else if (time >= 12 && time < 14) {
+        alert('식사');
+      } else {
+        alert('여러가지 임무를 수행합니다.');
+      }
+    </script>
+  </body>
+</html>

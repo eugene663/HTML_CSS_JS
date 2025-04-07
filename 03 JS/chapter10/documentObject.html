@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="test">1</div>
+    <div class="test">2</div>
+    <div class="test">3</div>
+    <div class="test">4</div>
+    <div class="test">5</div>
+
+    <script>
+      //클래스 명이 같은 요소 모두 얻어오기
+      const list1 = document.getElementsByClassName('test');
+      console.log('list1: ', list1);
+
+      // CSS 선택자가 일치하는 요소 모두 얻어오기
+      const list2 = document.querySelectorAll('.test');
+      console.log('list2: ', list2);
+    </script>
+  </body>
+</html>

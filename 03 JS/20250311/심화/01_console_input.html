@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>심화01</title>
+  </head>
+  <body>
+    <form>
+      <label for="name"> 이름 :</label>
+      <input id="name" name="name" type="text" size="30" />
+      <!-- <input id="btn" type="button" value="전송 " onclick="printName()" /> -->
+      <input id="btn" type="button" value="전송 " />
+    </form>
+
+    <script>
+      function printName() {
+        console.log(document.getElementById('name').value);
+      }
+      // input은 textContent가 아니라, value를 사용
+
+      const name = document.querySelector('#name');
+      btn.addEventListener('click', () => {
+        console.log(name.value);
+      });
+    </script>
+  </body>
+</html>

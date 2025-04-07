@@ -1,0 +1,66 @@
+/* 변효상 */
+.boldfont {
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-header {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.table-cell {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.sold-out {
+  background-color: lightcoral;
+  font-weight: bold;
+}
+
+.category-electronics {
+  color: red;
+}
+
+.category-clothing {
+  color: blue;
+}
+
+.category-living {
+  color: green;
+}
+
+.grey-background {
+  background-color: #f5f5f5;
+}
+
+/* 조자영 */
+textarea {
+  width: 400px;
+  height: 100px;
+}
+
+/* 이유진 */
+#t_sales {
+  line-height: 200%;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-color: lightgrey;
+}
+
+#t_sales thead {
+  background-color: #f2f2f2;
+}
+
+#t_sales th,
+#t_sales td {
+  padding-left: 5px;
+}

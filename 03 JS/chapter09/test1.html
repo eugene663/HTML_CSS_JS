@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for문의 종류</title>
+    <script>
+      let array = [1, 10, 20, , 30, 60];
+
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]); // undefinde라고 표현
+      }
+      ㄴ;
+      for (let i in array) {
+        console.log(i, array[i]); // undefined는 빠져서 출력
+      }
+      for (let i of array) {
+        console.log(i, array[i]); // 첫번째와 동일, 인덱스 정보는 접근 못함
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

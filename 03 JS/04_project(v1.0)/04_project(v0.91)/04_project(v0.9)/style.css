@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DungGeunMo';
+}
+
+body {
+  /* 고정 크기 지정 */
+  width: 1300px;
+  height: 1000px;
+  
+  margin: 0;
+  padding: 20px;
+  background-color: aliceblue;
+  
+  /* 기존에 있던 flex 설정 그대로 유지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  
+  /* 스크롤 가능하도록 설정 */
+  overflow: auto; 
+}
+
+.question-bar {
+  background-color: beige;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  height: clamp(1000px, 2.5vw, 1300px);
+}
+
+#bar-header {
+  background-color: rgb(171, 212, 171);
+  color: #333;
+  padding: 35px;
+}
+
+#bar-header h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+#bar-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  gap: 10px;
+}
+
+#bar-main button {
+  width: 70px;
+  height: 70px;
+  font-size: clamp(10px, 2.5vw, 30px);
+  color: #333;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.quiz-container {
+  background-color: beige;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#quiz-header {
+  background-color: rgb(171, 212, 171);
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+#quiz-header h1 {
+  font-size: 50px;
+  margin: 5px;
+}
+
+#quiz {
+  padding: 150px;
+}
+
+#question {
+  font-size: 35px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.option {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+}
+
+.option:hover {
+  background-color: #e5e5e5;
+}
+
+.option.selected {
+  background-color: rgb(214, 233, 214);
+  border-color: white;
+}
+
+.option.correct {
+  background-color: #c8f7c5;
+  border-color: #0a0;
+}
+
+.option.incorrect {
+  background-color: #f7c5c5;
+  border-color: #a00;
+}
+
+#result-message {
+  margin-bottom: 20px;
+  font-weight: 600;
+  height: 24px;
+  text-align: center;
+}
+
+.correct-message {
+  color: #0a0;
+}
+
+.incorrect-message {
+  color: #a00;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.navigation-btn,
+.submit-btn,
+.check-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  font-size: 25px;
+}
+
+.navigation-btn {
+  background-color: white;
+  color: #333;
+  font-size: 25px;
+}
+
+.navigation-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.submit-btn {
+  background-color: rgb(171, 212, 171);
+  color: #333;
+  flex-grow: 1;
+}
+
+.submit-btn:hover {
+  background-color: rgb(109, 153, 109);
+}
+
+.restart-btn {
+  background-color: rgb(171, 212, 171);
+  color: #333;
+  width: 100%;
+}
+
+.restart-btn:hover {
+  background-color: rgb(109, 153, 109);
+}
+
+.hide {
+  display: none;
+}
+
+#results {
+  padding: 30px;
+  text-align: center;
+}
+
+#results h2 {
+  color: #0a325b;
+  margin-bottom: 20px;
+}
+
+#score {
+  font-weight: bold;
+  font-size: 24px;
+  color: #0a325b;
+}
+
+#summary {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.summary-item.correct {
+  border-left: 4px solid #0a0;
+}
+
+.summary-item.incorrect {
+  border-left: 4px solid #a00;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.font-red {
+  color: #a00;
+}

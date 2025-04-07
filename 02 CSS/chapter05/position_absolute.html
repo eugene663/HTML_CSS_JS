@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS3 Position Property</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .box:nth-child(1) {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+      }
+      #container {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    Hello
+    <div id="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

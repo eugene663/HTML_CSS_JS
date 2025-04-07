@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>심화 02</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        좋아하는 음식은?
+        <label
+          ><input type="checkbox" name="food" value="라면 " id="check" />
+          라면</label
+        >
+        <label
+          ><input type="checkbox" name="food" value="만두 " id="check" /> 만두
+        </label>
+        <label
+          ><input
+            type="checkbox"
+            name="food"
+            value="불고기 "
+            id="check"
+          />불고기
+        </label>
+        <!-- <input id="btn " type="button" value="전송 " onclick="checkFood()" /> -->
+        <input id="btn" type="button" value="전송 " />
+      </div>
+    </form>
+
+    <script>
+      const btn = document.querySelector('#btn');
+
+      // 2번 방법
+      // :checked 상태 선택자 이용 -> check 된 요소만 선택 (if문 검사 필요X)
+      btn.addEventListener('click', () => {
+        const results = [];
+        const boxs = document.querySelectorAll('[name=food]:checked');
+        for (let b of boxs) {
+          results.push(b.value);
+        }
+        console.log('results:', results);
+      });
+
+      // // 1번 방법
+      // btn.addEventListener('click', () => {
+      //   //감지디는 시점에 check box 모두 얻어오기
+      //   // CSS 기본 속성 선택자: [속성명 = 속성값]
+
+      //   const boxs = document.querySelectorAll('[name=food]');
+      //   const results = [];
+      //   for (let b of boxs) {
+      //     if (b.checked) {
+      //       //console.log(b.value);
+      //       results.push(b.value);
+      //     }
+      //   }
+
+      //   console.log('results:', results);
+      // });
+
+      // function checkFood() {
+      //   let check = document.querySelectorAll('#check');
+      //   for (i in check) {
+      //     if (check[i].checked) {
+      //       console.log(check[i].value);
+      //     }
+      //   }
+      // }
+    </script>
+  </body>
+</html>
